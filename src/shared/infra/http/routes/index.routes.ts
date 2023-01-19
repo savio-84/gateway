@@ -1,5 +1,6 @@
 import { Request, Response, Router } from "express";
 import { usersRoutes } from "./users.routes";
+import { vehiclesRoutes } from "./vehicles.routes";
 const routes = Router();
 
 routes.get('/test-availability', (request: Request, response: Response) => {
@@ -7,5 +8,6 @@ routes.get('/test-availability', (request: Request, response: Response) => {
 });
 
 routes.use('/users', usersRoutes);
+routes.use('/vehicles', vehiclesRoutes);
 
 export { routes };
